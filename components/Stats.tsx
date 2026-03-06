@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "$4M+", label: "Monthly Run Rate" },
+  { value: "$3M+", label: "Monthly Run Rate" },
   { value: "60M+", label: "Combined Partner Followers" },
   { value: "$90M+", label: "In Revenue Generated" },
 ];
