@@ -3,7 +3,7 @@
 import Link from "next/link";
 import type { Job } from "@/data/jobs";
 import JobDescription from "@/components/JobDescription";
-import { openTypeform } from "@/lib/typeform";
+import TypeformButton from "@/components/TypeformButton";
 
 interface RoleDetailClientProps {
   job: Job;
@@ -32,10 +32,7 @@ export default function RoleDetailClient({ job }: RoleDetailClientProps) {
               Back
             </Link>
 
-            <button
-              onClick={openTypeform}
-              className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0B0B1A] text-sm font-semibold rounded-xl hover:bg-white/90 transition-all duration-200 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] cursor-pointer"
-            >
+            <TypeformButton className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0B0B1A] text-sm font-semibold rounded-xl hover:bg-white/90 transition-all duration-200 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] cursor-pointer">
               Apply Now
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                 <path
@@ -46,7 +43,7 @@ export default function RoleDetailClient({ job }: RoleDetailClientProps) {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </TypeformButton>
           </div>
         </div>
       </div>
@@ -84,10 +81,7 @@ export default function RoleDetailClient({ job }: RoleDetailClientProps) {
 
       {/* Sticky Apply Button (Mobile) */}
       <div className="md:hidden fixed bottom-0 right-0 left-0 z-20 p-4 bg-gradient-to-t from-[#0a0a1a] via-[#0a0a1a]/95 to-transparent pt-8">
-        <button
-          onClick={openTypeform}
-          className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-white text-[#0B0B1A] text-base font-bold rounded-xl hover:bg-white/90 transition-all duration-200 shadow-[0_-4px_32px_rgba(0,0,0,0.5)] cursor-pointer"
-        >
+        <TypeformButton className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-white text-[#0B0B1A] text-base font-bold rounded-xl hover:bg-white/90 transition-all duration-200 shadow-[0_-4px_32px_rgba(0,0,0,0.5)] cursor-pointer">
           Apply Now
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
@@ -98,7 +92,7 @@ export default function RoleDetailClient({ job }: RoleDetailClientProps) {
               strokeLinejoin="round"
             />
           </svg>
-        </button>
+        </TypeformButton>
       </div>
     </div>
   );
