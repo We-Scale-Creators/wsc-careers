@@ -24,18 +24,7 @@ export default function JobDescription({ sections }: JobDescriptionProps) {
                 {section.content}
               </p>
 
-              <TypeformButton className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0B0B1A] font-bold text-base rounded-xl hover:bg-white/90 transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] hover:-translate-y-0.5 cursor-pointer">
-                Apply Now
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path
-                    d="M3 8h10M9 4l4 4-4 4"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </TypeformButton>
+              <TypeformButton className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0B0B1A] font-bold text-base rounded-xl hover:bg-white/90 transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] hover:-translate-y-0.5 cursor-pointer" />
             </div>
           );
         }

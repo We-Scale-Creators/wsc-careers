@@ -1,26 +1,20 @@
 "use client";
 
-import type { ReactNode } from "react";
+import dynamic from "next/dynamic";
+
+const PopupButton = dynamic(
+  () => import("@typeform/embed-react").then((mod) => mod.PopupButton),
+  { ssr: false }
+);
 
 interface TypeformButtonProps {
-  children: ReactNode;
   className?: string;
 }
 
-/**
- * A button that opens the Typeform application form as a popup overlay.
- * Uses dynamic import so the @typeform/embed SDK is NEVER loaded at module level —
- * it only loads when the user clicks, preventing ghost DOM elements.
- */
-export default function TypeformButton({ children, className }: TypeformButtonProps) {
-  const handleClick = async () => {
-    const { createPopup } = await import("@typeform/embed");
-    createPopup("YFvvwYCM", { size: 80 }).open();
-  };
-
+export default function TypeformButton({ className }: TypeformButtonProps) {
   return (
-    <button type="button" onClick={handleClick} className={className}>
-      {children}
-    </button>
+    <PopupButton id="YFvvwYCM" size={80} className={className}>
+      Apply Now &rarr;
+    </PopupButton>
   );
 }

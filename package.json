@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.1",
-    "@typeform/embed": "^6.0.0",
+    "@typeform/embed-react": "^5.0.0",
     "@types/node": "^25.3.5",
     "@types/react": "^19.2.14",
     "framer-motion": "^12.35.0",
