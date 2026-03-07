@@ -9,11 +9,15 @@ const PopupButton = dynamic(
 
 interface TypeformButtonProps {
   className?: string;
+  formId?: string;
 }
 
-export default function TypeformButton({ className }: TypeformButtonProps) {
+export default function TypeformButton({
+  className,
+  formId = "YFvvwYCM",
+}: TypeformButtonProps) {
   return (
-    <PopupButton id="YFvvwYCM" size={80} className={className}>
+    <PopupButton id={formId} size={80} className={className}>
       Apply Now &rarr;
     </PopupButton>
   );

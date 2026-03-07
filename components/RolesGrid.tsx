@@ -1,10 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { jobs } from "@/data/jobs";
+import type { Job } from "@/data/jobs";
 import RoleCard from "./RoleCard";
 
-export default function RolesGrid() {
+interface RolesGridProps {
+  jobs: Job[];
+}
+
+export default function RolesGrid({ jobs }: RolesGridProps) {
   return (
     <section id="roles" className="py-24 relative">
       <div className="max-w-[1200px] mx-auto px-6">
